@@ -10,8 +10,8 @@ A project for [MarkLogic Data Hub](https://github.com/marklogic/marklogic-data-h
 * **/entities:** Entity definitions for:
   - **Artist:** Creator of the NFT art
   - **Nft:** NFT art piece
-  - **Release:** A collection of one or more NFT art pieces released at the same time
-  - **Results:** Sales results of the NFT art
+  - **Release:** Collection of one or more NFT art pieces released by an artist at the same time
+  - **Results:** Sales results of a NFT art piece
 * **/flows:** Data Hub flows for transforming the data:
   - **mapNifties:** Ingest and map the data to the entity definitions
   - **masterNifties:** Match identical entity instances and merge them
