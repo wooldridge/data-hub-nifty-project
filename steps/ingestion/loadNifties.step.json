@@ -1,0 +1,27 @@
+{
+  "headers": { },
+  "collections": [
+    "loadNifties"
+  ],
+  "permissions": "data-hub-common,read,data-hub-common,update",
+  "batchSize": 100,
+  "name": "loadNifties",
+  "description": "",
+  "sourceFormat": "json",
+  "targetFormat": "JSON",
+  "sourceName": "",
+  "sourceType": "",
+  "outputURIPrefix": "",
+  "additionalCollections": [ ],
+  "sourceDatabase": null,
+  "targetDatabase": "data-hub-STAGING",
+  "interceptors": [ ],
+  "provenanceGranularityLevel": "coarse",
+  "validateEntity": "doNotValidate",
+  "customHook": { },
+  "additionalSettings": { },
+  "stepDefinitionName": "default-ingestion",
+  "stepDefinitionType": "ingestion",
+  "stepId": "loadNifties-ingestion",
+  "lastUpdated": "2021-03-30T17:24:52.139878-07:00"
+}

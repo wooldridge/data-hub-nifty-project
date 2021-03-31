@@ -1,0 +1,62 @@
+{
+  "lang": "zxx",
+  "path-namespace": [
+    {
+      "prefix": "es",
+      "namespace-uri": "http://marklogic.com/entity-services"
+    }
+  ],
+  "range-path-index": [
+    {
+      "invalid-values": "reject",
+      "path-expression": "/(es:envelope|envelope)/(es:instance|instance)/Results/primarySales",
+      "range-value-positions": false,
+      "scalar-type": "decimal"
+    },
+    {
+      "invalid-values": "reject",
+      "path-expression": "/(es:envelope|envelope)/(es:instance|instance)/Results/primaryPrice",
+      "range-value-positions": false,
+      "scalar-type": "decimal"
+    },
+    {
+      "invalid-values": "reject",
+      "path-expression": "/(es:envelope|envelope)/(es:instance|instance)/Results/secondarySales",
+      "range-value-positions": false,
+      "scalar-type": "decimal"
+    },
+    {
+      "invalid-values": "reject",
+      "path-expression": "/(es:envelope|envelope)/(es:instance|instance)/Results/secondaryPriceSum",
+      "range-value-positions": false,
+      "scalar-type": "decimal"
+    },
+    {
+      "invalid-values": "reject",
+      "path-expression": "/(es:envelope|envelope)/(es:instance|instance)/Artist/name",
+      "range-value-positions": false,
+      "scalar-type": "string",
+      "collation": "http://marklogic.com/collation/codepoint"
+    },
+    {
+      "invalid-values": "reject",
+      "path-expression": "/(es:envelope|envelope)/(es:instance|instance)/Release/name",
+      "range-value-positions": false,
+      "scalar-type": "string",
+      "collation": "http://marklogic.com/collation/codepoint"
+    },
+    {
+      "invalid-values": "reject",
+      "path-expression": "/(es:envelope|envelope)/(es:instance|instance)/Nft/editions",
+      "range-value-positions": false,
+      "scalar-type": "decimal"
+    },
+    {
+      "invalid-values": "reject",
+      "path-expression": "/(es:envelope|envelope)/(es:instance|instance)/Nft/timestamp",
+      "range-value-positions": false,
+      "scalar-type": "dateTime"
+    }
+  ],
+  "database-name": "data-hub-FINAL"
+}

@@ -1,0 +1,42 @@
+{
+  "info": {
+    "title": "Results",
+    "version": "1.0.0",
+    "baseUri": "http://example.org/"
+  },
+  "definitions": {
+    "Results": {
+      "properties": {
+        "primarySales": {
+          "datatype": "integer",
+          "facetable": false,
+          "sortable": true,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "primaryPrice": {
+          "datatype": "integer",
+          "facetable": false,
+          "sortable": true,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "secondarySales": {
+          "datatype": "integer",
+          "facetable": false,
+          "sortable": true,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "secondaryPriceSum": {
+          "datatype": "integer",
+          "facetable": false,
+          "sortable": true,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "forNft": {
+          "datatype": "string",
+          "relatedEntityType": "http://example.org/Nft-1.0.0/Nft",
+          "joinPropertyName": "nftId"
+        }
+      }
+    }
+  }
+}

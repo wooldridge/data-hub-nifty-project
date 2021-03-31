@@ -1,0 +1,119 @@
+{
+  "collections": [
+    "mapArtist",
+    "Artist"
+  ],
+  "additionalCollections": [ ],
+  "permissions": "data-hub-common,read,data-hub-common,update",
+  "batchSize": 100,
+  "validateEntity": "doNotValidate",
+  "targetFormat": "JSON",
+  "name": "mapArtist",
+  "targetEntityType": "http://example.org/Artist-1.0.0/Artist",
+  "description": "",
+  "collection": "loadNifties",
+  "selectedSource": "collection",
+  "sourceQuery": "cts.collectionQuery(['loadNifties'])",
+  "sourceDatabase": "data-hub-STAGING",
+  "targetDatabase": "data-hub-FINAL",
+  "headers": { },
+  "interceptors": [ ],
+  "provenanceGranularityLevel": "coarse",
+  "customHook": { },
+  "additionalSettings": { },
+  "stepDefinitionName": "entity-services-mapping",
+  "stepDefinitionType": "mapping",
+  "stepId": "mapArtist-mapping",
+  "properties": {
+    "artistId": {
+      "sourcedFrom": "userProfile/id"
+    },
+    "name": {
+      "sourcedFrom": "userProfile/name"
+    },
+    "pic": {
+      "sourcedFrom": "userProfile/profile_pic_url"
+    }
+  },
+  "relatedEntityMappings": [
+    {
+      "relatedEntityMappingId": "Release:Artist.artistId",
+      "collections": ["mapArtist", "Release"],
+      "expressionContext": "/",
+      "permissions": "data-hub-common,read,data-hub-common,update",
+      "properties": {
+        "releaseId": {
+          "sourcedFrom": "id"
+        },
+        "name": {
+          "sourcedFrom": "storeName"
+        },
+        "pic": {
+          "sourcedFrom": "project_cover_photo_url"
+        },
+        "byArtist": {
+          "sourcedFrom": "userProfile/id"
+        }
+      },
+      "targetEntityType": "http://example.org/Release-0.0.1/Release"
+    },
+    {
+      "relatedEntityMappingId": "Nft:Artist.artistId",
+      "collections": ["mapArtist", "Nft"],
+      "expressionContext": "/",
+      "permissions": "data-hub-common,read,data-hub-common,update",
+      "properties": {
+        "nftId": {
+          "sourcedFrom": "concat(nifty/niftyContractAddress, '-', nifty/niftyType)"
+        },
+        "address": {
+          "sourcedFrom": "nifty/niftyContractAddress"
+        },
+        "type": {
+          "sourcedFrom": "nifty/niftyType"
+        },
+        "name": {
+          "sourcedFrom": "nifty/niftyTitle"
+        },
+        "pic": {
+          "sourcedFrom": "nifty/niftyDisplayImage"
+        },
+        "editions": {
+          "sourcedFrom": "nifty/niftyTotalNumOfEditions"
+        },
+        "timestamp": {
+          "sourcedFrom": "OpeningDateTimeInUTC"
+        },
+        "byArtist": {
+          "sourcedFrom": "userProfile/id"
+        }
+      },
+      "targetEntityType": "http://example.org/Nft-0.0.1/Nft"
+    },
+    {
+      "relatedEntityMappingId": "Results:Nft.nftId",
+      "collections": ["mapArtist", "Results"],
+      "expressionContext": "/",
+      "permissions": "data-hub-common,read,data-hub-common,update",
+      "properties": {
+        "primarySales": {
+          "sourcedFrom": "summary/number_of_pm_sales"
+        },
+        "primaryPrice": {
+          "sourcedFrom": "summary/orig_price_in_cents"
+        },
+        "secondarySales": {
+          "sourcedFrom": "summary/number_of_pm_sales"
+        },
+        "secondaryPriceSum": {
+          "sourcedFrom": "summary/sum_of_secondary_market_sales_in_cents"
+        },
+        "forNft": {
+          "sourcedFrom": "concat(nifty/niftyContractAddress, '-', nifty/niftyType)"
+        }
+      },
+      "targetEntityType": "http://example.org/Results-0.0.1/Results"
+    }
+  ]
+
+}

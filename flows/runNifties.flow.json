@@ -1,0 +1,12 @@
+{
+  "name": "runNifties",
+  "steps": {
+    "1": {
+      "stepId": "loadNifties-ingestion"
+    },
+    "2": {
+      "stepId": "mapArtist-mapping"
+    }
+  },
+  "lastUpdated": "2021-03-30T18:12:55.297353-07:00"
+}
