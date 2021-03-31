@@ -1,0 +1,17 @@
+{
+  "name": "masterNifties",
+  "steps": {
+    "1": {
+      "stepId": "matchArtist-matching"
+    },
+    "2": {
+      "stepId": "mergeArtist-merging"
+    },
+    "3": {
+      "stepId": "matchRelease-matching"
+    },
+    "4": {
+      "stepId": "mergeRelease-merging"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "mapNifties",
+  "steps": {
+    "1": {
+      "stepId": "loadNifties-ingestion"
+    },
+    "2": {
+      "stepId": "mapArtist-mapping"
+    }
+  }
+}
