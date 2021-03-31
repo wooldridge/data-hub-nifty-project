@@ -10,26 +10,22 @@
         "primarySales": {
           "datatype": "integer",
           "facetable": false,
-          "sortable": true,
-          "collation": "http://marklogic.com/collation/codepoint"
+          "sortable": true
         },
         "primaryPrice": {
           "datatype": "integer",
           "facetable": false,
-          "sortable": true,
-          "collation": "http://marklogic.com/collation/codepoint"
+          "sortable": true
         },
         "secondarySales": {
           "datatype": "integer",
           "facetable": false,
-          "sortable": true,
-          "collation": "http://marklogic.com/collation/codepoint"
+          "sortable": true
         },
         "secondaryPriceSum": {
           "datatype": "integer",
           "facetable": false,
-          "sortable": true,
-          "collation": "http://marklogic.com/collation/codepoint"
+          "sortable": true
         },
         "forNft": {
           "datatype": "string",

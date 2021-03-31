@@ -22,8 +22,7 @@
         "type": {
           "datatype": "integer",
           "facetable": false,
-          "sortable": false,
-          "collation": "http://marklogic.com/collation/codepoint"
+          "sortable": false
         },
         "name": {
           "datatype": "string",
@@ -40,14 +39,12 @@
         "editions": {
           "datatype": "integer",
           "facetable": false,
-          "sortable": true,
-          "collation": "http://marklogic.com/collation/codepoint"
+          "sortable": true
         },
         "timestamp": {
           "datatype": "dateTime",
           "facetable": false,
-          "sortable": true,
-          "collation": "http://marklogic.com/collation/codepoint"
+          "sortable": true
         },
         "byArtist": {
           "datatype": "integer",
