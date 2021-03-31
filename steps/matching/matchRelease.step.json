@@ -1,0 +1,62 @@
+{
+  "batchSize": 100,
+  "sourceDatabase": "data-hub-FINAL",
+  "targetDatabase": "data-hub-FINAL",
+  "targetEntity": "Release",
+  "sourceQuery": "cts.collectionQuery(['mapArtist'])",
+  "collections": [
+    "matchRelease"
+  ],
+  "permissions": "data-hub-common,read,data-hub-common,update",
+  "targetFormat": "JSON",
+  "matchRulesets": [
+    {
+      "name": "releaseId - Exact",
+      "weight": 100,
+      "reduce": false,
+      "matchRules": [
+        {
+          "entityPropertyPath": "releaseId",
+          "matchType": "exact",
+          "options": { }
+        }
+      ]
+    },
+    {
+      "name": "name - Exact",
+      "weight": 100,
+      "reduce": false,
+      "matchRules": [
+        {
+          "entityPropertyPath": "name",
+          "matchType": "exact",
+          "options": { }
+        }
+      ]
+    }
+  ],
+  "thresholds": [
+    {
+      "thresholdName": "id-name",
+      "action": "merge",
+      "score": 10
+    }
+  ],
+  "name": "matchRelease",
+  "targetEntityType": "Release",
+  "description": "",
+  "collection": "mapArtist",
+  "selectedSource": "collection",
+  "additionalCollections": [ ],
+  "headers": { },
+  "interceptors": [ ],
+  "provenanceGranularityLevel": "coarse",
+  "validateEntity": "doNotValidate",
+  "customHook": { },
+  "additionalSettings": { },
+  "stepDefinitionName": "default-matching",
+  "stepDefinitionType": "matching",
+  "stepId": "matchRelease-matching",
+  "acceptsBatch": true,
+  "stepUpdate": false
+}

@@ -1,0 +1,63 @@
+{
+  "batchSize": 100,
+  "sourceDatabase": "data-hub-FINAL",
+  "targetDatabase": "data-hub-FINAL",
+  "permissions": "data-hub-common,read,data-hub-common,update",
+  "targetEntity": "Release",
+  "sourceQuery": "cts.collectionQuery(['matchRelease'])",
+  "provenanceGranularityLevel": "coarse",
+  "collections": [
+    "mergeRelease"
+  ],
+  "targetFormat": "JSON",
+  "mergeRules": [
+    {
+      "entityPropertyPath": "releaseId",
+      "mergeType": "strategy",
+      "mergeStrategyName": "oneValue"
+    },
+    {
+      "entityPropertyPath": "name",
+      "mergeType": "strategy",
+      "mergeStrategyName": "oneValue"
+    },
+    {
+      "entityPropertyPath": "pic",
+      "mergeType": "strategy",
+      "mergeStrategyName": "oneValue"
+    },
+    {
+      "entityPropertyPath": "byArtist",
+      "mergeType": "strategy",
+      "mergeStrategyName": "oneValue"
+    }
+  ],
+  "mergeStrategies": [
+    {
+      "strategyName": "oneValue",
+      "maxSources": "All",
+      "maxValues": "1",
+      "priorityOrder": {
+        "sources": [ ]
+      }
+    }
+  ],
+  "targetCollections": null,
+  "name": "mergeRelease",
+  "targetEntityType": "http://example.org/Release-1.0.0/Release",
+  "description": "",
+  "collection": "mapArtist",
+  "selectedSource": "collection",
+  "timestamp": "",
+  "additionalCollections": [ ],
+  "headers": { },
+  "interceptors": [ ],
+  "validateEntity": "doNotValidate",
+  "customHook": { },
+  "additionalSettings": { },
+  "stepDefinitionName": "default-merging",
+  "stepDefinitionType": "merging",
+  "stepId": "mergeRelease-merging",
+  "acceptsBatch": false,
+  "stepUpdate": false
+}

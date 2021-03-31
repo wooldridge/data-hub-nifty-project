@@ -3,6 +3,8 @@
   "collections": [
     "loadNifties"
   ],
+  "inputFilePath": "input",
+  "outputURIReplacement": ".*input,'/Nifty'",
   "permissions": "data-hub-common,read,data-hub-common,update",
   "batchSize": 100,
   "name": "loadNifties",
@@ -22,6 +24,5 @@
   "additionalSettings": { },
   "stepDefinitionName": "default-ingestion",
   "stepDefinitionType": "ingestion",
-  "stepId": "loadNifties-ingestion",
-  "lastUpdated": "2021-03-30T22:31:35.470272-07:00"
+  "stepId": "loadNifties-ingestion"
 }
