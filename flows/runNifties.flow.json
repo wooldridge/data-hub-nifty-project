@@ -6,7 +6,19 @@
     },
     "2": {
       "stepId": "mapArtist-mapping"
+    },
+    "3": {
+      "stepId": "matchArtist-matching"
+    },
+    "4": {
+      "stepId": "mergeArtist-merging"
+    },
+    "5": {
+      "stepId": "matchRelease-matching"
+    },
+    "6": {
+      "stepId": "mergeRelease-merging"
     }
   },
-  "lastUpdated": "2021-03-30T18:12:55.297353-07:00"
+  "lastUpdated": "2021-03-30T23:17:55.143883-07:00"
 }

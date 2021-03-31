@@ -38,7 +38,10 @@
   "relatedEntityMappings": [
     {
       "relatedEntityMappingId": "Release:Artist.artistId",
-      "collections": ["mapArtist", "Release"],
+      "collections": [
+        "mapArtist",
+        "Release"
+      ],
       "expressionContext": "/",
       "permissions": "data-hub-common,read,data-hub-common,update",
       "properties": {
@@ -59,7 +62,10 @@
     },
     {
       "relatedEntityMappingId": "Nft:Artist.artistId",
-      "collections": ["mapArtist", "Nft"],
+      "collections": [
+        "mapArtist",
+        "Nft"
+      ],
       "expressionContext": "/",
       "permissions": "data-hub-common,read,data-hub-common,update",
       "properties": {
@@ -92,7 +98,10 @@
     },
     {
       "relatedEntityMappingId": "Results:Nft.nftId",
-      "collections": ["mapArtist", "Results"],
+      "collections": [
+        "mapArtist",
+        "Results"
+      ],
       "expressionContext": "/",
       "permissions": "data-hub-common,read,data-hub-common,update",
       "properties": {
@@ -114,6 +123,6 @@
       },
       "targetEntityType": "http://example.org/Results-1.0.0/Results"
     }
-  ]
-
+  ],
+  "lastUpdated": "2021-03-30T22:31:34.919608-07:00"
 }

@@ -36,7 +36,7 @@
           "facetable": false,
           "sortable": false,
           "collation": "http://marklogic.com/collation/codepoint"
-        },  
+        },
         "editions": {
           "datatype": "integer",
           "facetable": false,
