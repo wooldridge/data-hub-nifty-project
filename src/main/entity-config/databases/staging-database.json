@@ -9,31 +9,52 @@
   } ],
   "range-path-index" : [ {
     "invalid-values" : "reject",
-    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Customer/customerId",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Results/primarySales",
     "range-value-positions" : false,
     "scalar-type" : "decimal"
   }, {
     "invalid-values" : "reject",
-    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Customer/birthDate",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Results/primaryPrice",
     "range-value-positions" : false,
-    "scalar-type" : "date"
+    "scalar-type" : "decimal"
   }, {
     "invalid-values" : "reject",
-    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Customer/status",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Results/secondarySales",
+    "range-value-positions" : false,
+    "scalar-type" : "decimal"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Results/secondaryPriceSum",
+    "range-value-positions" : false,
+    "scalar-type" : "decimal"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Artist/name",
     "range-value-positions" : false,
     "scalar-type" : "string",
     "collation" : "http://marklogic.com/collation/"
   }, {
     "invalid-values" : "reject",
-    "path-expression" : "/es:envelope/es:instance/oex:NamespacedCustomer/oex:customerIdentifier",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Release/name",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Nft/name",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Nft/editions",
     "range-value-positions" : false,
     "scalar-type" : "decimal"
   }, {
     "invalid-values" : "reject",
-    "path-expression" : "/es:envelope/es:instance/oex:NamespacedCustomer/oex:status",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Nft/timestamp",
     "range-value-positions" : false,
-    "scalar-type" : "string",
-    "collation" : "http://marklogic.com/collation/"
+    "scalar-type" : "dateTime"
   } ],
   "range-element-index" : [ ],
   "database-name" : "%%mlStagingDbName%%"
