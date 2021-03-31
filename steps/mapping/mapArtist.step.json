@@ -55,7 +55,7 @@
           "sourcedFrom": "userProfile/id"
         }
       },
-      "targetEntityType": "http://example.org/Release-0.0.1/Release"
+      "targetEntityType": "http://example.org/Release-1.0.0/Release"
     },
     {
       "relatedEntityMappingId": "Nft:Artist.artistId",
@@ -88,7 +88,7 @@
           "sourcedFrom": "userProfile/id"
         }
       },
-      "targetEntityType": "http://example.org/Nft-0.0.1/Nft"
+      "targetEntityType": "http://example.org/Nft-1.0.0/Nft"
     },
     {
       "relatedEntityMappingId": "Results:Nft.nftId",
@@ -112,7 +112,7 @@
           "sourcedFrom": "concat(nifty/niftyContractAddress, '-', nifty/niftyType)"
         }
       },
-      "targetEntityType": "http://example.org/Results-0.0.1/Results"
+      "targetEntityType": "http://example.org/Results-1.0.0/Results"
     }
   ]
 
