@@ -23,30 +23,6 @@ configurations {
     mlcp
 }
 
-["CurateCustomerJSON", "CurateCustomerXML", "CurateNamespacedCustomers",
- "CurateCustomerWithRelatedEntitiesJSON", "CurateCustomerWithRelatedEntitiesXML"].each {theFlowName ->
-    task "run${theFlowName}" (type: com.marklogic.gradle.task.RunFlowTask, group: "Run flow") {
-        description = "Run the ingestion and mapping steps for flow ${theFlowName}"
-        flowName = theFlowName
-        steps = ["1", "2"]
-    }
-}
-
-task runFlows {
-    dependsOn {
-        tasks.findAll { task -> "Run flow".equals(task.group) }
-    }
-}
-
-task mergeJsonCustomers(type: com.marklogic.gradle.task.RunFlowTask) {
-    flowName = "CurateCustomerJSON"
-    steps = ["3", "4"]
-}
-
-mlDeploy.finalizedBy runFlows, mergeJsonCustomers
-mergeJsonCustomers.mustRunAfter runFlows
-
-
 // The following config is used for manual ad hoc testing of loading data via MLCP and the DHF MLCP transform
 repositories {
     jcenter()
