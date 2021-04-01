@@ -29,3 +29,13 @@ A project for [MarkLogic Data Hub](https://github.com/marklogic/marklogic-data-h
 1. Initialize the project in MarkLogic Data Hub.
 2. Run the steps in the mapNifties flow to ingest and map the NFT data. There will be duplicate Artist and Release documents.
 3. Run the steps in the masterNifties flow to deduplicate the Artist and Release documents.
+
+## Notes
+
+* To run SQL queries on the data in QConsole, give the admin user `data-hub-operator` privileges and run queries on the `data-hub-FINAL` database. Example query:
+
+```
+SELECT Artist.name, Nft.name, Results.secondaryPriceSum FROM Artist, Nft, Results 
+WHERE Artist.artistId = Nft.byArtist AND Nft.nftId = Results.forNft 
+ORDER BY Results.secondaryPriceSum DESC LIMIT 30
+```
