@@ -31,8 +31,14 @@
     "name": {
       "sourcedFrom": "userProfile/name"
     },
+    "username": {
+      "sourcedFrom": "userProfile/profile_url"
+    },
     "pic": {
       "sourcedFrom": "userProfile/profile_pic_url"
+    },
+    "link": {
+      "sourcedFrom": "concat('https://niftygateway.com/profile/', userProfile/profile_url)"
     }
   },
   "relatedEntityMappings": [
@@ -53,6 +59,9 @@
         },
         "pic": {
           "sourcedFrom": "project_cover_photo_url"
+        },
+        "link": {
+          "sourcedFrom": "concat('https://niftygateway.com/collections/', storeURL)"
         },
         "byArtist": {
           "sourcedFrom": "userProfile/id"
@@ -86,6 +95,9 @@
         },
         "editions": {
           "sourcedFrom": "nifty/niftyTotalNumOfEditions"
+        },
+        "hasSound": {
+          "sourcedFrom": "nifty/has_sound"
         },
         "timestamp": {
           "sourcedFrom": "OpeningDateTimeInUTC"

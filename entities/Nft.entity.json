@@ -47,9 +47,10 @@
           "sortable": true
         },
         "hasSound": {
-          "datatype": "boolean",
+          "datatype": "string",
           "facetable": true,
-          "sortable": false
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
         },
         "timestamp": {
           "datatype": "dateTime",
