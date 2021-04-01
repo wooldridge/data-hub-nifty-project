@@ -55,10 +55,13 @@ SELECT Artist.name AS 'Artist Name',
        Nft.editions AS Editions, 
        CONCAT('$', TRUNC(Results.primaryPrice/100)) AS 'Original Price', 
        CONCAT('$', TRUNC(Results.secondaryPriceAvg/100)) AS 'Resale Price (Avg)', 
-       CONCAT(TRUNC(Results.priceChangePercent), '%') AS 'Price Change'
+       CONCAT('$', TRUNC((Results.secondaryPriceAvg-Results.primaryPrice)/100)) AS 'Price Change in Dollars',
+       CONCAT(TRUNC(Results.priceChangePercent), '%') AS 'Percentage Price Change'
 FROM Nft
-JOIN Results ON Nft.NftId=Results.forNft
-JOIN Artist ON Artist.artistId=Nft.byArtist
+JOIN Results
+ON Nft.NftId=Results.forNft
+JOIN Artist
+ON Artist.artistId=Nft.byArtist
 WHERE Results.secondaryPriceAvg > 0
 GROUP BY Nft.name
 ORDER BY Results.priceChangePercent ASC
