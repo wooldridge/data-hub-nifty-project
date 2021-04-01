@@ -94,7 +94,7 @@
           "sourcedFrom": "nifty/niftyDisplayImage"
         },
         "link": {
-          "sourcedFrom": "concat('https://niftygateway.com/marketplace?page=1&search=&collection=', contractAddress, '&type=', nifty/niftyType, '&onSale=false')"
+          "sourcedFrom": "concat('https://niftygateway.com/itemdetail/primary/', nifty/niftyContractAddress, '/', nifty/niftyType)"
         },
         "editions": {
           "sourcedFrom": "nifty/niftyTotalNumOfEditions"
