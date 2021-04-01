@@ -32,7 +32,7 @@ A project for [MarkLogic Data Hub](https://github.com/marklogic/marklogic-data-h
 
 ## Notes
 
-* To run SQL queries on the data in QConsole, give the admin user `data-hub-operator` privileges and run queries on the `data-hub-FINAL` database. Example query:
+* To run SQL queries on the data in QConsole, give the admin user `data-hub-operator` privileges and run queries on the `data-hub-FINAL` database. Example queries:
 
 ```
 SELECT Artist.name AS Artist, 
