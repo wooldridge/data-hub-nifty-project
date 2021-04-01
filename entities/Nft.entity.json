@@ -16,8 +16,7 @@
         "address": {
           "datatype": "string",
           "facetable": false,
-          "sortable": false,
-          "collation": "http://marklogic.com/collation/codepoint"
+          "sortable": false
         },
         "type": {
           "datatype": "integer",
@@ -36,10 +35,21 @@
           "sortable": false,
           "collation": "http://marklogic.com/collation/codepoint"
         },
+        "link": {
+          "datatype": "string",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
         "editions": {
           "datatype": "integer",
           "facetable": false,
           "sortable": true
+        },
+        "hasSound": {
+          "datatype": "boolean",
+          "facetable": true,
+          "sortable": false
         },
         "timestamp": {
           "datatype": "dateTime",
@@ -50,6 +60,11 @@
           "datatype": "integer",
           "relatedEntityType": "http://example.org/Artist-1.0.0/Artist",
           "joinPropertyName": "artistId"
+        },
+        "inRelease": {
+          "datatype": "string",
+          "relatedEntityType": "http://example.org/Release-1.0.0/Release",
+          "joinPropertyName": "releaseId"
         }
       },
       "primaryKey": "nftId"

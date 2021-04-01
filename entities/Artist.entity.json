@@ -10,7 +10,7 @@
         "artistId": {
           "datatype": "integer",
           "facetable": false,
-          "sortable": false
+          "sortable": true
         },
         "name": {
           "datatype": "string",
@@ -18,7 +18,19 @@
           "sortable": true,
           "collation": "http://marklogic.com/collation/codepoint"
         },
+        "username": {
+          "datatype": "string",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
         "pic": {
+          "datatype": "string",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "link": {
           "datatype": "string",
           "facetable": false,
           "sortable": false,

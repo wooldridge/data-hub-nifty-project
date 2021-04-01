@@ -35,6 +35,11 @@
     "collation" : "http://marklogic.com/collation/codepoint"
   }, {
     "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Artist/artistId",
+    "range-value-positions" : false,
+    "scalar-type" : "decimal"
+  }, {
+    "invalid-values" : "reject",
     "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Release/name",
     "range-value-positions" : false,
     "scalar-type" : "string",
@@ -50,6 +55,11 @@
     "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Nft/editions",
     "range-value-positions" : false,
     "scalar-type" : "decimal"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Nft/hasSound",
+    "range-value-positions" : false,
+    "scalar-type" : "boolean"
   }, {
     "invalid-values" : "reject",
     "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Nft/timestamp",

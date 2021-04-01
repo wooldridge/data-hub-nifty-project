@@ -3,7 +3,7 @@
   "sourceDatabase": "data-hub-FINAL",
   "targetDatabase": "data-hub-FINAL",
   "targetEntity": "Release",
-  "sourceQuery": "cts.collectionQuery(['mapArtist'])",
+  "sourceQuery": "cts.collectionQuery(['Release'])",
   "collections": [
     "matchRelease"
   ],
@@ -12,7 +12,7 @@
   "matchRulesets": [
     {
       "name": "releaseId - Exact",
-      "weight": 100,
+      "weight": 90,
       "reduce": false,
       "matchRules": [
         {
@@ -21,23 +21,11 @@
           "options": { }
         }
       ]
-    },
-    {
-      "name": "name - Exact",
-      "weight": 100,
-      "reduce": false,
-      "matchRules": [
-        {
-          "entityPropertyPath": "name",
-          "matchType": "exact",
-          "options": { }
-        }
-      ]
     }
   ],
   "thresholds": [
     {
-      "thresholdName": "id-name",
+      "thresholdName": "releaseDedup",
       "action": "merge",
       "score": 10
     }
@@ -45,7 +33,7 @@
   "name": "matchRelease",
   "targetEntityType": "Release",
   "description": "",
-  "collection": "mapArtist",
+  "collection": "Release",
   "selectedSource": "collection",
   "additionalCollections": [ ],
   "headers": { },

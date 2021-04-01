@@ -3,7 +3,7 @@
   "sourceDatabase": "data-hub-FINAL",
   "targetDatabase": "data-hub-FINAL",
   "targetEntity": "Artist",
-  "sourceQuery": "cts.collectionQuery(['mapArtist'])",
+  "sourceQuery": "cts.collectionQuery(['Artist'])",
   "collections": [
     "matchArtist"
   ],
@@ -11,20 +11,8 @@
   "targetFormat": "JSON",
   "matchRulesets": [
     {
-      "name": "name - Exact",
-      "weight": 100,
-      "reduce": false,
-      "matchRules": [
-        {
-          "entityPropertyPath": "name",
-          "matchType": "exact",
-          "options": { }
-        }
-      ]
-    },
-    {
       "name": "artistId - Exact",
-      "weight": 100,
+      "weight": 90,
       "reduce": false,
       "matchRules": [
         {
@@ -37,15 +25,15 @@
   ],
   "thresholds": [
     {
-      "thresholdName": "id-name",
+      "thresholdName": "artistDedup",
       "action": "merge",
-      "score": 50
+      "score": 10
     }
   ],
   "name": "matchArtist",
   "targetEntityType": "Artist",
   "description": "",
-  "collection": "mapArtist",
+  "collection": "Artist",
   "selectedSource": "collection",
   "additionalCollections": [ ],
   "headers": { },

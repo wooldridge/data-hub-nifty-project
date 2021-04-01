@@ -25,6 +25,12 @@
           "sortable": false,
           "collation": "http://marklogic.com/collation/codepoint"
         },
+        "link": {
+          "datatype": "string",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
         "byArtist": {
           "datatype": "integer",
           "relatedEntityType": "http://example.org/Artist-1.0.0/Artist",
