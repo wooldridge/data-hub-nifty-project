@@ -47,4 +47,15 @@ AND Nft.nftId = Results.forNft
 GROUP BY Nft.name
 ORDER BY Results.priceChangePercent DESC 
 LIMIT 50
+
+SELECT Nft.name AS 'NFT Name', 
+       Nft.editions AS Editions, 
+       CONCAT('$', TRUNC(Results.primaryPrice/100)) AS 'Original Price', 
+       CONCAT('$', TRUNC(Results.secondaryPriceAvg/100)) AS 'Resale Price (Avg)', 
+       CONCAT(TRUNC(Results.priceChangePercent), '%') AS 'Price Change'
+FROM Nft
+JOIN Results
+ON Nft.NftId=Results.forNft
+ORDER BY Results.priceChangePercent DESC
+LIMIT 50
 ```
