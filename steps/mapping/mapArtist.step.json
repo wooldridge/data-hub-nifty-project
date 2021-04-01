@@ -132,6 +132,12 @@
         "secondaryPriceSum": {
           "sourcedFrom": "summary/sum_of_secondary_market_sales_in_cents"
         },
+        "secondaryPriceAvg": {
+          "sourcedFrom": "summary/average_secondary_market_sale_price_in_cents"
+        },
+        "priceChangePercent": {
+          "sourcedFrom": "summary/percentage_increase"
+        },
         "forNft": {
           "sourcedFrom": "concat(nifty/niftyContractAddress, '-', nifty/niftyType)"
         }

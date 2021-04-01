@@ -27,6 +27,16 @@
           "facetable": false,
           "sortable": true
         },
+        "secondaryPriceAvg": {
+          "datatype": "float",
+          "facetable": false,
+          "sortable": true
+        },
+        "priceChangePercent": {
+          "datatype": "float",
+          "facetable": false,
+          "sortable": true
+        },
         "forNft": {
           "datatype": "string",
           "relatedEntityType": "http://example.org/Nft-1.0.0/Nft",

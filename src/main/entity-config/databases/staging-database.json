@@ -29,6 +29,16 @@
     "scalar-type" : "decimal"
   }, {
     "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Results/secondaryPriceAvg",
+    "range-value-positions" : false,
+    "scalar-type" : "float"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Results/priceChangePercent",
+    "range-value-positions" : false,
+    "scalar-type" : "float"
+  }, {
+    "invalid-values" : "reject",
     "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/Artist/name",
     "range-value-positions" : false,
     "scalar-type" : "string",
