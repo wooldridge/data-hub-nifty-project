@@ -35,6 +35,7 @@ A project for [MarkLogic Data Hub](https://github.com/marklogic/marklogic-data-h
 * To run SQL queries on the data in QConsole, give the admin user `data-hub-operator` privileges and run queries on the `data-hub-FINAL` database. Example queries:
 
 ```
+-- Highest Performers
 SELECT Artist.name AS Artist, 
        Nft.name AS NFT, 
        (Results.primaryPrice/100) AS 'Primary Price', 
@@ -48,14 +49,18 @@ GROUP BY Nft.name
 ORDER BY Results.priceChangePercent DESC 
 LIMIT 50
 
-SELECT Nft.name AS 'NFT Name', 
+-- Lowest Performers
+SELECT Artist.name AS 'Artist Name',
+       Nft.name AS 'NFT Name', 
        Nft.editions AS Editions, 
        CONCAT('$', TRUNC(Results.primaryPrice/100)) AS 'Original Price', 
        CONCAT('$', TRUNC(Results.secondaryPriceAvg/100)) AS 'Resale Price (Avg)', 
        CONCAT(TRUNC(Results.priceChangePercent), '%') AS 'Price Change'
 FROM Nft
-JOIN Results
-ON Nft.NftId=Results.forNft
-ORDER BY Results.priceChangePercent DESC
+JOIN Results ON Nft.NftId=Results.forNft
+JOIN Artist ON Artist.artistId=Nft.byArtist
+WHERE Results.secondaryPriceAvg > 0
+GROUP BY Nft.name
+ORDER BY Results.priceChangePercent ASC
 LIMIT 50
 ```
