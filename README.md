@@ -15,7 +15,7 @@ A project for [MarkLogic Data Hub](https://github.com/marklogic/marklogic-data-h
 * **/flows:** Data Hub flows for transforming the data:
   - **mapNifties:** Ingest and map the data to the entity definitions
   - **masterNifties:** Match identical entity instances and merge them
-* **/data:** Data Hub steps to define the data transformations 
+* **/steps:** Data Hub steps to define the data transformations 
 
 ## Relationships
 
