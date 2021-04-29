@@ -26,8 +26,8 @@ A project for [MarkLogic Data Hub](https://github.com/marklogic/marklogic-data-h
 
 ## Steps for Transforming the Data
 
-1. Initialize the project in MarkLogic Data Hub.
-2. Run the steps in the mapNifties flow to ingest and map the NFT data. Execute the folllowing in the project root: `./gradlew hubRunFlow -PflowName=mapNifties` There will be duplicate Artist and Release documents.
+1. Clone this project and initialize it in MarkLogic Data Hub. (Edit the `gradle.properties` file with your MarkLogic authentication information.)
+2. Run the steps in the mapNifties flow to ingest and map the NFT data. You can use the Hub Central UI or execute the folllowing in the project root: `./gradlew hubRunFlow -PflowName=mapNifties` There will be duplicate Artist and Release documents generated.
 3. Run the steps in the masterNifties flow to deduplicate the Artist and Release documents. You can do this in the Hub Central UI.
 
 ## Notes
