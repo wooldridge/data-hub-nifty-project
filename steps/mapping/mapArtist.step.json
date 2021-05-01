@@ -127,7 +127,7 @@
           "sourcedFrom": "summary/orig_price_in_cents"
         },
         "secondarySales": {
-          "sourcedFrom": "summary/number_of_pm_sales"
+          "sourcedFrom": "summary/number_of_sm_sales"
         },
         "secondaryPriceSum": {
           "sourcedFrom": "summary/sum_of_secondary_market_sales_in_cents"
